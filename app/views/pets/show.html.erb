@@ -1,0 +1,11 @@
+<h1>Showing a pet</h1>
+<h2>
+  <%= @pet.name %>
+</h2>
+<p>
+  colour: <%= @pet.color %> <br>
+  species: <%= @pet.species %> <br>
+  found on: <%= @pet.found_on %>
+</p>
+<%= link_to 'Edit pet', edit_pet_path  %>
+<%= link_to 'Delete pet', pet_path, data:{confirm: "Are you sure?"}, method: :delete %>

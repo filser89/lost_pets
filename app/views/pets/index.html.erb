@@ -1,0 +1,7 @@
+<h1>Pets#index</h1>
+<% @pets.each_with_index do |pet, i| %>
+  <h2>
+    <%= link_to "#{i+1}. #{pet.name}", pet_path(pet)  %>
+  </h2>
+<% end %>
+<%= link_to 'Murder all', pets_path, method: :delete %>
